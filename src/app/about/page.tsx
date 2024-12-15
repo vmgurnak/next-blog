@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Page',
+  title: 'Next Blog - About Page',
 };
 
 const About = () => {
   return (
     <div>
-      <h1>About Page</h1>
+      <h3>Select subitem</h3>
     </div>
   );
 };
