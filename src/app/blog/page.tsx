@@ -4,6 +4,7 @@
 import { useEffect, useState } from 'react';
 import { getAllPosts } from '../services/getPosts';
 import Posts from '@/component/Posts';
+import PostSearch from '@/component/PostSearch';
 
 // export const metadata: Metadata = {
 //   title: 'Next Blog - Blog Page',
@@ -22,6 +23,7 @@ const BlogPage = () => {
   return (
     <>
       <h1>Page Blog</h1>
+      <PostSearch onSearch={setPosts} />
       {isLoading ? <h3>Loading...</h3> : <Posts posts={posts} />}
     </>
   );

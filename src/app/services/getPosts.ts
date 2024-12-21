@@ -21,11 +21,11 @@ export const getAllPosts = async () => {
 };
 
 export const getPostsBySearch = async (search: string) => {
-  const responce = await fetch(
+  const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts?q=${search}`
   );
 
-  if (!responce.ok) throw new Error('Unable to fetch posts.');
+  if (!response.ok) throw new Error('Unable to fetch posts.');
 
-  return responce.json();
+  return response.json();
 };
