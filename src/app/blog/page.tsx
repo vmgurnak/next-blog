@@ -17,6 +17,7 @@ const BlogPage = () => {
   useEffect(() => {
     getAllPosts()
       .then(setPosts)
+      .catch(console.error)
       .finally(() => setIsLoading(false));
   }, []);
 
