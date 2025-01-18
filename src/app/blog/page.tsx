@@ -1,3 +1,4 @@
+// use component
 'use client';
 
 // import { Metadata } from 'next';
@@ -8,10 +9,11 @@ import PostSearch from '@/component/PostSearch';
 
 // export const metadata: Metadata = {
 //   title: 'Next Blog - Blog Page',
+//   description: 'Blog page',
 // };
 
 const BlogPage = () => {
-  const [posts, setPosts] = useState<any[]>([]);
+  const [posts, setPosts] = useState<object[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -31,3 +33,32 @@ const BlogPage = () => {
 };
 
 export default BlogPage;
+
+// Server Component
+// Server Site Rendering
+
+// import { Metadata } from 'next';
+// import { getAllPosts } from '../services/getPosts';
+// import Link from 'next/link';
+
+// export const metadata: Metadata = {
+//   title: 'Next Blog - Blog Page',
+//   description: 'Blog page',
+// };
+
+// export default async function Blog() {
+//   const posts = await getAllPosts();
+
+//   return (
+//     <>
+//       <h1>Blog page</h1>
+//       <ul>
+//         {posts.map((post: { id: string; title: string }) => (
+//           <li key={post.id}>
+//             <Link href={`/blog/${post.id}`}>{post.title}</Link>
+//           </li>
+//         ))}
+//       </ul>
+//     </>
+//   );
+// }
